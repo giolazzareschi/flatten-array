@@ -15,7 +15,7 @@
 	function recursive( arr ){		
 		for( var p in arr ){ 
 			var md = arr[ p ];
-			if( !md.length )
+			if( !Array.isArray( md.length ) )
 				add.apply( this, [md] );
 
 			recursive.apply( this, [md] );
